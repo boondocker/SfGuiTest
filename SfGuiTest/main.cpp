@@ -7,12 +7,20 @@ int main(){
 
 	//Create an SFGUI object.
 	sfg::SFGUI sfgui;
-
+	sfg::Desktop sfDesktop;
+	
+	
+	
 	//Create the main sfgui window
 	auto window = sfg::Window::Create();
-
+	sfDesktop.GetEngine().LoadThemeFromFile("\example1.theme");
+	
 	//Set the window's title bar text
 	window->SetTitle("Test Window");
+	window->SetId("window1");
+	
+	sfDesktop.Add(window);
+	sfDesktop.SetProperty("Window#window1", "BackgroundColor", sf::Color::Blue);
 
 	//Game loop
 	while (app_window.isOpen()){
@@ -28,7 +36,8 @@ int main(){
 		}
 
 		//Update the gui
-		window->Update(0.f);
+		sfDesktop.Update(0.f);
+		//window->Update(0.f);
 
 		//Clear screen
 		app_window.clear();
