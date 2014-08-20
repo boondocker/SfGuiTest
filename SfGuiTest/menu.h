@@ -8,7 +8,7 @@ public:
 	void							ButtonCheck();
 	void							ButtonSelect();
 	void							Run();
-
+	
 private:
 	sfg::SFGUI						mSfgui;
 	sfg::Window::Ptr				mWindow;

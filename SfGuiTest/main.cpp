@@ -1,8 +1,12 @@
-#include "menu.h"""
+#include "menu.h"
+#include "ScrollWindow.h"
 
 int main(){
 	Menu menu;
-	menu.Run();
+	ScrollingWindow sWindow;
+
+
+	sWindow.run();
 
 	return EXIT_SUCCESS;
 }
